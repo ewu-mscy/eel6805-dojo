@@ -1,0 +1,118 @@
+# EEL 6805: Advanced Malware Reverse Engineering (Edward Waters University)
+# Private course dojo. Every challenge is imported from existing pwn.college dojos.
+# Challenge IDs verified against pwncollege/program-security-dojo, pwncollege/welcome-dojo,
+# and pwncollege/computing-101 on GitHub, September 27, 2026.
+
+id: ewu-eel6805
+name: "EEL 6805: Advanced Malware Reverse Engineering"
+type: hidden
+password: CHANGE-ME-BEFORE-PUBLISHING
+description: |
+  Welcome to the EEL 6805 course dojo. Everything you do on pwn.college for
+  this course is here, in the order you will need it.
+
+  - Module 3 (required preparation): Using the Dojo, Your First Program, and
+    Debugging Refresher. These teach you the workspace and give you hands-on
+    practice reading assembly before Lab 2.
+  - Module 4 (Lab 2): six reverse engineering challenges. Open Ghidra from the
+    Desktop in your challenge workspace. Use the alternates only if an assigned
+    challenge is unavailable.
+  - Module 6 (optional): challenges that hide their logic inside a custom
+    virtual machine, a technique some malware uses to slow down analysts.
+
+  Your progress on this dojo's scoreboard is part of the evidence for your Lab 2
+  grade. Do not share flags, solutions, or write-ups with anyone. If something
+  will not load, post in the course's General Questions and Answers board.
+
+modules:
+
+  # Module 3 preparation (ungraded, required): learning the platform
+  - import:
+      dojo: welcome
+      module: welcome
+
+  # Module 3 preparation (ungraded, required): hands-on assembly
+  - import:
+      dojo: computing-101
+      module: your-first-program
+
+  - import:
+      dojo: computing-101
+      module: debugging-refresher
+
+  # Module 4: Lab 2 (graded)
+  - id: lab-2
+    name: "Lab 2: Reverse Engineering with Ghidra"
+    description: |
+      Complete these six challenges in order. Open Ghidra from the Desktop in your
+      challenge workspace. Lecture videos for this material are on the public
+      Reverse Engineering module: https://pwn.college/program-security/reverse-engineering/
+    challenges:
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: level-1-0
+        name: "Terrible Token (Easy)"
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: level-1-1
+        name: "Terrible Token (Hard)"
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: level-2-0
+        name: "Tangled Ticket (Easy)"
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: level-2-1
+        name: "Tangled Ticket (Hard)"
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: bit-bender
+        name: "Bit Bender"
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: substitution-sorcery
+        name: "Substitution Sorcery"
+
+  # Module 4: Lab 2 alternates (use only if an assigned challenge is unavailable)
+  - id: lab-2-alternates
+    name: "Lab 2 Alternates"
+    description: |
+      Use these only if an assigned Lab 2 challenge is unavailable, and note the
+      substitution in your report. Use Meager Mangler (Easy) for any Easy slot and
+      Meager Mangler (Hard) for any other slot.
+    challenges:
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: level-6-0
+        name: "Meager Mangler (Easy)"
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: level-6-1
+        name: "Meager Mangler (Hard)"
+
+  # Module 6: optional advanced practice (ungraded)
+  - id: optional-obfuscation
+    name: "Optional: VM-Based Obfuscation"
+    description: |
+      Optional and ungraded. These challenges hide their logic inside a custom
+      virtual machine, the same technique some malware uses to slow down analysts.
+      Start with the Easy version.
+    challenges:
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: level-15-0
+        name: "Trust the Yancode (Easy)"
+      - import:
+          dojo: program-security
+          module: reverse-engineering
+          challenge: level-15-1
+        name: "Trust the Yancode (Hard)"
